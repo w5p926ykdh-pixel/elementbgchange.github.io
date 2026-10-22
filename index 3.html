@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cino's extensions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0074ff;--ink:#0a0a0a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+  font:500 clamp(1.5rem,2.6vw,2.2rem)/1.3 "Segoe Script","Lucida Handwriting","Caveat",cursive}
+.page{max-width:80rem;margin:0 auto;padding:2rem 1.5rem 3rem;
+  display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:auto auto;gap:1rem 2rem;align-items:center}
+.page img{max-width:100%;height:auto;display:block}
+.intro,.ext{text-align:center;margin:0}
+.files{grid-column:1 / 4;display:flex;justify-content:space-around;align-items:center;gap:2rem;padding:2rem 0}
+.file{color:var(--ink);text-decoration:none;font-size:clamp(3rem,7vw,5.5rem);font-weight:700;line-height:1;padding:.4rem 1rem;border-radius:1rem}
+.file:hover{background:rgba(255,255,255,.25)}
+.file:focus-visible{outline:4px solid #fff;outline-offset:4px}
+.cat{justify-self:center;width:min(100%,22rem)}
+@media (max-width:760px){
+  .page{grid-template-columns:1fr 1fr}
+  .c1{order:1}.intro{order:2}.c2{order:3}.ext{order:4}
+  .files{grid-column:1 / 3;order:5;flex-direction:column}
+  .cat{grid-column:1 / 3;order:6;width:min(80%,18rem)}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <img class="c1" src="images/cino1.png" alt="Cartoon character with big sparkly eyes" width="260" height="295">
+  <p class="intro">hiii<br>my name is cino</p>
+  <img class="c2" src="images/cino2.png" alt="Cartoon character with a pink bow" width="230" height="240">
+  <p class="ext">and thwese awe my extwensions</p>
+
+  <div class="files">
+    <a class="file" href="files/extension-1.xpi" download>file</a>
+    <a class="file" href="files/extension-2.xpi" download>file</a>
+  </div>
+  <img class="cat" src="images/cat.png" alt="White cat pointing at the files" width="365" height="340">
+</main>
+</body>
+</html>
