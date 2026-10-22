@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#3072f8;--ink:#0a0a0a}
+:root{--bg:#3b3a73;--ink:#ffffff}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
+body{margin:0;min-height:100vh;background:linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12)),url("images/background.jpg") left top/cover no-repeat,var(--bg);color:var(--ink);text-shadow:0 1px 6px rgba(0,0,0,.55);
   font:500 clamp(1.5rem,2.6vw,2.2rem)/1.3 "Segoe Script","Lucida Handwriting","Caveat",cursive}
 .page{max-width:80rem;margin:0 auto;padding:2rem 1.5rem 2rem;
   display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1rem 2rem;align-items:center}
@@ -21,7 +21,7 @@ body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
 .name{font-size:clamp(2.2rem,5vw,4rem);font-weight:700;line-height:1.1}
 .dl{display:inline-flex;color:var(--ink);padding:.5rem;border-radius:1rem}
 .dl svg{width:clamp(3.5rem,8vw,6rem);height:auto;display:block}
-.dl:hover{background:rgba(255,255,255,.25)}
+.dl:hover{background:rgba(255,255,255,.2)}
 .dl:focus-visible{outline:4px solid #fff;outline-offset:4px}
 .cat{justify-self:center;width:min(100%,22rem)}
 .note{max-width:80rem;margin:0 auto;padding:0 1.5rem 2rem;font-size:clamp(1.4rem,3vw,2.2rem)}
@@ -43,13 +43,13 @@ body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);
   <div class="files">
     <div class="item">
       <span class="name">gwoogle and bwave</span>
-      <a class="dl" href="files/GOOGLE-AND-BRAVE.zip" download aria-label="Download the Google and Brave extension (zip)">
+      <a class="dl" href="files/google-and-brave.zip" download aria-label="Download the Google and Brave extension (zip)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
       </a>
     </div>
     <div class="item">
       <span class="name">fiwefox</span>
-      <a class="dl" href="files/FIREFOX.zip" download aria-label="Download the Firefox extension (zip)">
+      <a class="dl" href="files/firefox.zip" download aria-label="Download the Firefox extension (zip)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
       </a>
     </div>
