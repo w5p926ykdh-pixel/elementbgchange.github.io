@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#25284d">
+  <title>404 — Cino.</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: dark;
+      --white: #fffafc;
+      --muted: rgba(255,250,252,.78);
+    }
+    body {
+      margin: 0;
+      min-height: 100svh;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      color: var(--white);
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(ellipse at 74% 52%, rgba(194,126,76,.58), transparent 29%),
+        radial-gradient(ellipse at 24% 18%, rgba(58,72,135,.9), transparent 43%),
+        radial-gradient(ellipse at 45% 105%, rgba(190,150,166,.78), transparent 35%),
+        linear-gradient(125deg, #171a38 0%, #3b3c69 52%, #25203e 100%);
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -35px;
+      pointer-events: none;
+      background: inherit;
+      filter: blur(24px);
+      opacity: .45;
+      z-index: -1;
+    }
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.035), transparent 68%);
+    }
+    main {
+      width: min(1050px, 100%);
+      min-height: min(660px, calc(100svh - 56px));
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(28px, 6vw, 76px);
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 28px;
+      background: rgba(18, 20, 43, .17);
+      box-shadow: 0 24px 90px rgba(10,8,25,.18);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .brand {
+      position: absolute;
+      top: 30px;
+      left: clamp(28px, 6vw, 76px);
+      font-size: 18px;
+      letter-spacing: .02em;
+      color: rgba(255,255,255,.88);
+    }
+    .brand span { color: #7fe3ec; }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .eyebrow {
+      margin: 0 0 2px 8px;
+      font-family: "Segoe Print", "Bradley Hand", cursive;
+      font-size: clamp(22px, 3vw, 34px);
+      transform: rotate(-4deg);
+      color: #fff;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(110px, 19vw, 210px);
+      line-height: .9;
+      letter-spacing: -.09em;
+      font-weight: 800;
+      text-shadow: 0 5px 0 rgba(35,24,48,.25);
+    }
+    h2 {
+      margin: 22px 0 12px;
+      font-family: "Segoe Print", "Bradley Hand", cursive;
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.2;
+      font-weight: 600;
+      transform: rotate(-2deg);
+    }
+    p {
+      max-width: 410px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 16px;
+      margin: 0 0 26px;
+    }
+    .actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border: 1px solid rgba(255,255,255,.48);
+      border-radius: 15px;
+      background: rgba(255,255,255,.13);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 650;
+      backdrop-filter: blur(12px);
+      transition: transform .2s ease, background .2s ease;
+    }
+    a:hover { background: rgba(255,255,255,.24); transform: translateY(-2px); }
+    a:focus-visible { outline: 3px solid #8deaf2; outline-offset: 4px; }
+    .arrow { font-size: 20px; }
+    .sticker-zone { position: relative; min-height: 350px; }
+    .note {
+      position: absolute;
+      top: 8%;
+      right: 0;
+      width: 210px;
+      text-align: center;
+      font-family: "Segoe Print", "Bradley Hand", cursive;
+      font-size: clamp(21px, 2.8vw, 31px);
+      line-height: 1.35;
+      transform: rotate(4deg);
+      text-shadow: 0 2px 4px rgba(20,15,35,.35);
+    }
+    .sparkle {
+      position: absolute;
+      top: 34%;
+      left: 4%;
+      font-size: 46px;
+      color: #fff4dc;
+      transform: rotate(-12deg);
+      text-shadow: 0 3px 15px rgba(255,255,255,.3);
+    }
+    .sticker {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      filter: drop-shadow(0 8px 9px rgba(14,10,30,.18));
+      user-select: none;
+    }
+    .ghost { top: 28%; right: 12%; font-size: clamp(88px, 12vw, 145px); transform: rotate(9deg); }
+    .cat { bottom: 0; left: 16%; font-size: clamp(86px, 11vw, 132px); transform: rotate(-8deg); }
+    footer {
+      position: absolute;
+      bottom: 26px;
+      left: clamp(28px, 6vw, 76px);
+      color: rgba(255,255,255,.68);
+      font-size: 13px;
+      letter-spacing: .04em;
+    }
+    @media (max-width: 650px) {
+      body { padding: 12px; overflow: auto; }
+      main { min-height: calc(100svh - 24px); padding: 72px 24px 70px; border-radius: 22px; }
+      .brand { top: 24px; left: 24px; }
+      .layout { grid-template-columns: 1fr; gap: 0; }
+      h1 { font-size: clamp(108px, 30vw, 160px); }
+      .eyebrow { margin-left: 5px; }
+      h2 { margin-top: 18px; }
+      .sticker-zone { min-height: 180px; margin-top: 8px; }
+      .note { top: 0; right: 0; width: 150px; font-size: 20px; }
+      .ghost { top: 22%; right: 8%; font-size: 88px; }
+      .cat { bottom: 0; left: 12%; font-size: 82px; }
+      .sparkle { top: 35%; left: 2%; font-size: 34px; }
+      footer { bottom: 22px; left: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main>
+    <div class="brand">Cino<span>.</span></div>
+    <div class="layout">
+      <section>
+        <div class="eyebrow">hiii, you seem lost</div>
+        <h1>404</h1>
+        <h2>Lost in the void.</h2>
+        <p>The page you're looking for doesn't exist or may have been moved. Let's get you back somewhere familiar.</p>
+        <div class="actions">
+          <a href="/"><span class="arrow" aria-hidden="true">↩</span> Back to home</a>
+        </div>
+      </section>
+      <aside class="sticker-zone" aria-label="Decorative stickers">
+        <div class="note">this page<br>isn't here<br>anymore</div>
+        <div class="sparkle" aria-hidden="true">✦</div>
+        <div class="sticker ghost" aria-hidden="true">👻</div>
+        <div class="sticker cat" aria-hidden="true">🐈</div>
+      </aside>
+    </div>
+    <footer>the@cino.pntr.dev</footer>
+  </main>
+</body>
+</html>
